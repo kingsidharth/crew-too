@@ -1,0 +1,21 @@
+[project]
+name = "crew-too"
+version = "0.1.0"
+description = "Search agent with simple search and stock research flows"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=1.14.5",
+    "tavily-python>=0.7.0",
+]
+
+[project.scripts]
+kickoff = "crew_too.main:kickoff"
+run_crew = "crew_too.main:kickoff"
+plot = "crew_too.main:plot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"
